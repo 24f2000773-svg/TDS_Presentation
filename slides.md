@@ -1,75 +1,98 @@
 <!-- marp: true -->
-<!-- theme: custom-theme -->
+<!-- theme: custom -->
 <!-- paginate: true -->
 
 ---
-title: Product Documentation Presentation
+title: Product Documentation — Marp Edition
 author: 24f2000773@ds.study.iitm.ac.in
 ---
 
 <!-- class: lead -->
-
 <style>
-:root {
-  --primary-color: #0055aa;
-  --accent-color: #0a84ff;
-  --bg-soft: #f4f8ff;
+/* Custom theme CSS for Marp */
+:root{
+  --primary:#0b5ed7;
+  --accent:#0a84ff;
+  --bg:#fbfdff;
+  --text:#0f1720;
 }
 
 section {
-  background-color: var(--bg-soft);
-  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  padding: 48px;
 }
 
-h1, h2, h3 {
-  color: var(--primary-color);
+/* Header styles */
+h1, h2, h3 { color: var(--primary); margin-bottom: 0.25em; }
+
+/* Footer / page-number area (Marp will render page numbers when paginate is enabled) */
+footer {
+  color: #556;
+  font-size: 0.75rem;
+  padding-top: 8px;
+}
+
+/* Small utility classes */
+.lead { font-size: 1.15rem; }
+.small { font-size: 0.9rem; color: #445; }
+
+/* Highlight block for code or callouts */
+.callout {
+  border-left: 6px solid var(--accent);
+  background: rgba(10,132,255,0.05);
+  padding: 12px 16px;
+  border-radius: 6px;
 }
 </style>
 
-# Product Documentation  
-### Technical Overview
+<!-- Slide 1: Title (includes email) -->
+# Product Documentation — Technical Overview
+### Maintainable docs with Marp
 
-**Email:** 24f2000773@ds.study.iitm.ac.in
+**Contact:** 24f2000773@ds.study.iitm.ac.in
+
+---
+
+<!-- class: center -->
+# Goals
+- Source-controlled, Markdown-first documentation  
+- Easily convertible to PDF/HTML using Marp CLI or GitHub Actions  
+- Reusable theme, consistent typography, and accessible colors
 
 ---
 
 <!-- class: invert -->
+# System Design Highlights
 
-# System Architecture
+- Microservices architecture  
+- API gateway + event-driven internals  
+- Observability, CI/CD, and automated releases
 
-- API Gateway  
-- Microservices  
-- Distributed events  
-
-Mathematical complexity:
+**Complexity (algorithmic example):**
 
 \[
-T(n) = O(n \log n)
+T(n) = O(n \log n) \quad\text{(typical sort/merge-based operations)}
 \]
 
 ---
 
-<!-- backgroundImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=60" -->
+<!-- backgroundImage: "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=1400&q=80" -->
 <!-- backgroundSize: cover -->
+<!-- backgroundOpacity: 0.35 -->
 
-# Platform Workflow
+# Visualizing the Workflow
 
-Steps:
-
-1. Request enters gateway  
-2. Service routing  
-3. Response aggregation  
+This slide uses a full-bleed background image to illustrate system flow.
 
 ---
 
-<!-- class: highlight -->
+<!-- class: callout -->
+# Example Configuration (Custom Styling)
 
-# Custom Styling Demonstration
+Use this block to document theme variables and Marp usage:
 
-This slide uses a custom class directive.
-
-```css
-section {
-  border-left: 10px solid var(--accent-color);
-  padding-left: 24px;
-}
+```yaml
+# marp CLI usage example for conversion
+marp --html --theme ./slides.md --allow-local-files slides.md

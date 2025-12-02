@@ -1,21 +1,19 @@
----
-marp: true
-title: Product Documentation Presentation
-author: 24f2000773@ds.study.iitm.ac.in
-paginate: true
-theme: custom-theme
----
-
+<!-- marp: true -->
 <!-- theme: custom-theme -->
 <!-- paginate: true -->
+
+---
+title: Product Documentation Presentation
+author: 24f2000773@ds.study.iitm.ac.in
+---
+
 <!-- class: lead -->
 
 <style>
 :root {
   --primary-color: #0055aa;
   --accent-color: #0a84ff;
-  --text-color: #222;
-  --bg-soft: #f7faff;
+  --bg-soft: #f4f8ff;
 }
 
 section {
@@ -26,17 +24,12 @@ section {
 h1, h2, h3 {
   color: var(--primary-color);
 }
-
-footer {
-  font-size: 0.7rem;
-  color: #555;
-}
 </style>
 
 # Product Documentation  
 ### Technical Overview
 
-**Contact:** 24f2000773@ds.study.iitm.ac.in
+**Email:** 24f2000773@ds.study.iitm.ac.in
 
 ---
 
@@ -44,35 +37,39 @@ footer {
 
 # System Architecture
 
+- API Gateway  
 - Microservices  
-- Cloud-native  
-- API-driven design
+- Distributed events  
 
 Mathematical complexity:
 
 \[
-T(n) = O(n^2) \quad \text{and} \quad S(n) = O(\log n)
+T(n) = O(n \log n)
 \]
 
 ---
 
-<!-- backgroundImage: "https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1200&q=60" -->
+<!-- backgroundImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=60" -->
 <!-- backgroundSize: cover -->
 
 # Platform Workflow
 
-- Load balancers  
-- Workers  
-- Distributed event queues  
+Steps:
+
+1. Request enters gateway  
+2. Service routing  
+3. Response aggregation  
 
 ---
 
 <!-- class: highlight -->
 
-# Custom Styling Example
+# Custom Styling Demonstration
+
+This slide uses a custom class directive.
 
 ```css
 section {
-  border-left: 12px solid var(--accent-color);
+  border-left: 10px solid var(--accent-color);
   padding-left: 24px;
 }

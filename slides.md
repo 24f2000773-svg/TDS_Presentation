@@ -1,42 +1,35 @@
 ---
 marp: true
-theme: custom-theme
-paginate: true
-_paginate: true
 title: Product Documentation Presentation
 author: 24f2000773@ds.study.iitm.ac.in
-style: |
-  section {
-    font-family: "Segoe UI", sans-serif;
-  }
-  h1, h2, h3 {
-    color: #0055aa;
-  }
-  footer {
-    color: #666;
-    font-size: 0.75rem;
-  }
+paginate: true
+theme: custom-theme
 ---
 
-<!-- Custom Theme Definition -->
+<!-- theme: custom-theme -->
+<!-- paginate: true -->
+<!-- class: lead -->
+
 <style>
 :root {
   --primary-color: #0055aa;
   --accent-color: #0a84ff;
   --text-color: #222;
-  --bg-soft: #f5f9ff;
+  --bg-soft: #f7faff;
 }
 
 section {
   background-color: var(--bg-soft);
+  font-family: "Segoe UI", sans-serif;
 }
 
-h1 {
+h1, h2, h3 {
   color: var(--primary-color);
 }
 
-strong {
-  color: var(--accent-color);
+footer {
+  font-size: 0.7rem;
+  color: #555;
 }
 </style>
 
@@ -47,58 +40,39 @@ strong {
 
 ---
 
+<!-- class: invert -->
+
 # System Architecture
 
-Our platform is designed for scalability, modularity, and performance.
+- Microservices  
+- Cloud-native  
+- API-driven design
 
-- Microservices-based
-- Cloud-native deployment
-- CI/CD integrated
-
-Mathematical notation (algorithmic complexity):
+Mathematical complexity:
 
 \[
-T(n) = O(n \log n)
+T(n) = O(n^2) \quad \text{and} \quad S(n) = O(\log n)
 \]
 
 ---
 
-<!-- Slide with a background image -->
-<!-- Use any public image URL -->
-![bg](https://images.unsplash.com/photo-1504384308090-c894fdcc538d)
+<!-- backgroundImage: "https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1200&q=60" -->
+<!-- backgroundSize: cover -->
 
 # Platform Workflow
 
-The workflow ensures reliability across distributed nodes.
-
-- Request routing  
-- Load balancing  
-- Stateful + stateless services  
+- Load balancers  
+- Workers  
+- Distributed event queues  
 
 ---
+
+<!-- class: highlight -->
 
 # Custom Styling Example
 
-This slide demonstrates:
-
-- Custom CSS  
-- Theming  
-- Marp directives  
-
-<style>
+```css
 section {
   border-left: 12px solid var(--accent-color);
-  padding-left: 30px;
+  padding-left: 24px;
 }
-</style>
-
----
-
-# Summary
-
-- Maintainable documentation  
-- Convertible to PDF/HTML  
-- Version-controlled workflow  
-
-Questions?  
-Email: **24f2000773@ds.study.iitm.ac.in**

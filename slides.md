@@ -1,98 +1,119 @@
-<!-- marp: true -->
-<!-- theme: custom -->
-<!-- paginate: true -->
+---
+marp: true
+theme: custom-theme
+paginate: true
+_paginate: false
+title: "Product Documentation Presentation"
+description: "Marp-based documentation"
+class: lead
+---
+
+<!--
+Contact: 24f2000773@ds.study.iitm.ac.in
+-->
+
+# Product Documentation  
+### Using Marp for Maintainable Technical Docs
 
 ---
-title: Product Documentation — Marp Edition
-author: 24f2000773@ds.study.iitm.ac.in
----
 
-<!-- class: lead -->
+<!-- Custom theme -->
 <style>
-/* Custom theme CSS for Marp */
-:root{
-  --primary:#0b5ed7;
-  --accent:#0a84ff;
-  --bg:#fbfdff;
-  --text:#0f1720;
-}
-
 section {
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
-  padding: 48px;
+  font-family: "Segoe UI", sans-serif;
 }
-
-/* Header styles */
-h1, h2, h3 { color: var(--primary); margin-bottom: 0.25em; }
-
-/* Footer / page-number area (Marp will render page numbers when paginate is enabled) */
+h1 {
+  color: #1976d2;
+  font-weight: 700;
+}
+h2 {
+  color: #0d47a1;
+}
+p {
+  font-size: 1.1em;
+}
 footer {
-  color: #556;
-  font-size: 0.75rem;
-  padding-top: 8px;
-}
-
-/* Small utility classes */
-.lead { font-size: 1.15rem; }
-.small { font-size: 0.9rem; color: #445; }
-
-/* Highlight block for code or callouts */
-.callout {
-  border-left: 6px solid var(--accent);
-  background: rgba(10,132,255,0.05);
-  padding: 12px 16px;
-  border-radius: 6px;
+  color: #444;
+  font-size: 0.75em;
 }
 </style>
 
-<!-- Slide 1: Title (includes email) -->
-# Product Documentation — Technical Overview
-### Maintainable docs with Marp
+<!-- Custom theme definition -->
+<!-- You can place this in a separate CSS file if needed -->
+<style scoped>
+:root {
+  --bg-color: #fafafa;
+  --fg-color: #111;
+}
+section {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+}
+</style>
 
-**Contact:** 24f2000773@ds.study.iitm.ac.in
+# Why Use Marp for Product Documentation?
+
+- Version-controlled Markdown  
+- Easy PDF/HTML export  
+- Supports code, math, images  
+- Great for engineering + PM teams
 
 ---
 
-<!-- class: center -->
-# Goals
-- Source-controlled, Markdown-first documentation  
-- Easily convertible to PDF/HTML using Marp CLI or GitHub Actions  
-- Reusable theme, consistent typography, and accessible colors
+# Algorithmic Complexity Example
 
----
+We frequently document engineering decisions using math.
 
-<!-- class: invert -->
-# System Design Highlights
-
-- Microservices architecture  
-- API gateway + event-driven internals  
-- Observability, CI/CD, and automated releases
-
-**Complexity (algorithmic example):**
+**Time complexity of merge sort:**
 
 \[
-T(n) = O(n \log n) \quad\text{(typical sort/merge-based operations)}
+T(n) = 2T\left(\frac{n}{2}\right) + O(n)
+\]
+
+By Master Theorem:
+
+\[
+T(n) = O(n \log n)
 \]
 
 ---
 
-<!-- backgroundImage: "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=1400&q=80" -->
-<!-- backgroundSize: cover -->
-<!-- backgroundOpacity: 0.35 -->
+<!-- Slide with background image -->
+<!-- Using a free background URL for demo -->
+---
+backgroundImage: "https://images.unsplash.com/photo-1527443224154-9f2fc6f74c95?auto=format&fit=crop&w=1200&q=60"
+backgroundSize: cover
+color: white
+---
 
-# Visualizing the Workflow
+# System Architecture Overview
 
-This slide uses a full-bleed background image to illustrate system flow.
+The diagram illustrates request flow, caching, and scaling strategies.
+
+*(This slide uses a full-screen background image.)*
 
 ---
 
-<!-- class: callout -->
-# Example Configuration (Custom Styling)
+# Custom-Styled Feature Summary
 
-Use this block to document theme variables and Marp usage:
+<div style="border: 2px solid #1976d2; padding: 16px; border-radius: 10px; background: #e3f2fd;">
+  
+### Key Platform Features
+- Modular microservices  
+- API-first design  
+- Automated testing  
+- Observability baked in  
+- CI/CD integration
 
-```yaml
-# marp CLI usage example for conversion
-marp --html --theme ./slides.md --allow-local-files slides.md
+</div>
+
+---
+
+# Contact
+
+For documentation updates or engineering review:
+
+**Email:** 24f2000773@ds.study.iitm.ac.in
+
+Thank you!
+

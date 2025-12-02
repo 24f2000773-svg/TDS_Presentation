@@ -1,62 +1,80 @@
-marp: true theme: default paginate: true backgroundColor: #f0f4f8 style: | section { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; justify-content: center; } h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; } code { background: #e1e8ed; color: #c0392b; }
+---
+marp: true
+theme: custom
+paginate: true
+class: lead
+style: |
+  /* Custom Marp theme */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+  :root{
+    --bg: #0f172a;
+    --surface: #0b1220;
+    --accent: #7c3aed;
+    --primary: #06b6d4;
+    --muted: #9fb6b5;
+    --text: #e6eef8;
+  }
+
+  section {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background-color: var(--surface);
+    color: var(--text);
+    padding: 48px;
+  }
+
+  /* Headings */
+  h1 { color: var(--primary); font-size: 2.6rem; letter-spacing: -0.02em; }
+  h2 { color: var(--accent); font-size: 1.8rem; }
+
+  /* Small email block */
+  .email { color: #c7f9f8; font-weight: 600; font-size: 0.95rem; }
+
+  /* Code blocks */
+  pre, code { background: rgba(255,255,255,0.03); border-radius: 6px; padding: .35rem .5rem; }
+
+  /* Footer / page number area (works together with paginate: true) */
+  .marp-footer { position: fixed; bottom: 14px; right: 18px; color: var(--muted); font-size: 0.82rem; }
+
+  /* Slide-specific helper classes */
+  .two-col { display: flex; gap: 28px; align-items: flex-start; }
+  .two-col > div { flex: 1; }
+
+  /* Accent pills */
+  .pill { display:inline-block; padding:6px 10px; border-radius:999px; background: rgba(124,58,237,0.14); color:var(--accent); font-weight:700; }
+
+  /* Accessibility: high contrast for images with text */
+  .bg-caption { background: rgba(0,0,0,0.45); padding: 8px 12px; border-radius: 6px; display:inline-block; }
+
+---
 
 <!-- _class: lead -->
+# Product Documentation — **Lockdown CLI Sync**
+_A concise, version-controlled Marp deck for technical documentation_
 
-API Documentation Strategy
+<span class="email">Contact: 24f2000773@ds.study.iitm.ac.in</span>
 
-Version 2.0
+<footer class="marp-footer">Product Docs • v1.0 • 24f2000773@ds.study.iitm.ac.in</footer>
 
-Technical Writer
-Email: 24f2000773@ds.study.iitm.ac.in
+---
 
-Algorithm Complexity Analysis
+## Why Marp for product docs?
 
-We utilize an optimized sorting algorithm for the data ingestion pipeline.
+- Markdown-first: maintainable in Git & easy code review  
+- Exportable: HTML, PDF, PPTX via Marp CLI / GitHub Actions  
+- Lightweight theming & slide-level directives for customization
 
-The time complexity is defined as:
+---
 
-$$T(n) = a T(n/b) + f(n)$$
+## Repo layout (recommended)
 
-Where the master theorem implies:
-
-
-$$O(n \log n)$$
-
-<!--
-_class: lead
-_color: white
--->
-
-Global Infrastructure
-
-Scalable & Reliable
-
-Designed for high availability across distributed regions.
-
-<!-- _backgroundColor: #2c3e50 -->
-
-<!-- _color: #ecf0f1 -->
-
-Custom Styling Directive
-
-This slide uses specific Marp directives for styling:
-
-_backgroundColor overrides the global theme.
-
-_color sets the text color for this slide only.
-
-Code Snippet:
-
-def optimize_data(data):
-    return sorted(data, key=lambda x: x.timestamp)
-
-
-Conclusion
-
-Maintainable in Git.
-
-Exportable to PDF, HTML, and PPTX.
-
-Clear mathematical specifications.
-
-Contact: 24f2000773@ds.study.iitm.ac.in
+```text
+/README.md
+/slides.md            <- This Marp file
+/assets/
+  /img/
+  /diagrams/
+/docs/
+  /api.md
+  /cli.md
+.github/workflows/md-to-pdf.yml
